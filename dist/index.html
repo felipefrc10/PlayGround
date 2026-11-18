@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+  <meta name="theme-color" content="#8bd8ff" />
+  <title>Balloon Pop!</title>
+  <script type="module" crossorigin src="/assets/index-D3t5kN8P.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BBQbK4dq.css">
+</head>
+<body>
+  <main class="game-shell">
+    <div class="sky-glow"></div>
+    <header class="hud">
+      <div class="brand" aria-label="Balloon Pop">
+        <span class="brand-balloon">🎈</span>
+        <span>BALLOON <b>POP!</b></span>
+      </div>
+      <div class="stats">
+        <div class="stat"><small>SCORE</small><strong id="score">0</strong></div>
+        <div class="stat"><small>BEST</small><strong id="best">0</strong></div>
+        <div class="stat lives"><small>LIVES</small><strong id="lives">♥ ♥ ♥</strong></div>
+      </div>
+    </header>
+
+    <section id="playfield" class="playfield" aria-label="Balloon popping game">
+      <div class="cloud cloud-a"></div>
+      <div class="cloud cloud-b"></div>
+      <div class="cloud cloud-c"></div>
+      <div class="hills hill-back"></div>
+      <div class="hills hill-front"></div>
+
+      <div id="startPanel" class="panel">
+        <div class="panel-balloon">🎈</div>
+        <p class="eyebrow">READY FOR LIFT-OFF?</p>
+        <h1>Pop the balloons!</h1>
+        <p class="instructions">Tap or click every balloon before it floats away.<br>Don't let 3 escape!</p>
+        <button id="startButton" class="primary-button">START GAME <span>→</span></button>
+        <p class="tip"><kbd>SPACE</kbd> also starts the game</p>
+      </div>
+
+      <div id="gameOverPanel" class="panel hidden">
+        <p class="eyebrow">FLIGHT COMPLETE</p>
+        <h1>Great popping!</h1>
+        <div class="final-score"><small>YOUR SCORE</small><strong id="finalScore">0</strong></div>
+        <button id="restartButton" class="primary-button">PLAY AGAIN <span>↻</span></button>
+      </div>
+    </section>
+
+    <footer class="controls">
+      <span><b>POP</b> balloons</span>
+      <span><b>MISS</b> 3 and it's over</span>
+    </footer>
+  </main>
+</body>
+</html>
